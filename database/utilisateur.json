@@ -1,0 +1,28 @@
+{
+  "utilisateur": [
+    {
+      "id_utilisateur": "1",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "jean.dupont@example.com",
+      "numero_telephone": "+1234567890",
+      "id_blog_utilisateur": "101"
+    },
+    {
+      "id_utilisateur": "1",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "jean.dupont@example.com",
+      "numero_telephone": "+1234567890",
+      "id_blog_utilisateur": "101"
+    },
+    {
+      "id_utilisateur": "1",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "jean.dupont@example.com",
+      "numero_telephone": "+1234567890",
+      "id_blog_utilisateur": "101"
+    }
+  ]
+}

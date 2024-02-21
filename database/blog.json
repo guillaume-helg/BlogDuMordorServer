@@ -1,0 +1,25 @@
+{
+  "blog": [
+    {
+      "identifiant": 1,
+      "nom": "Blog du Saint",
+      "id_auteur": "Aie",
+      "droit_d'acces" : [
+      ]
+    },
+    {
+      "identifiant": 1,
+      "nom": "Blog du Saint",
+      "id_auteur": "Aie",
+      "droit_d'acces" : [
+      ]
+    },
+    {
+      "identifiant": 1,
+      "nom": "Blog du Saint",
+      "id_auteur": "Aie",
+      "droit_d'acces" : [
+      ]
+    }
+  ]
+}
