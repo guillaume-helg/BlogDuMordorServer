@@ -5,21 +5,24 @@
       "nom": "Dupont",
       "prenom": "Jean",
       "email": "jean.dupont@example.com",
+      "mot_de_passe": "dcdsdscdcsdc",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
     },
     {
-      "id_utilisateur": "1",
+      "id_utilisateur": "2",
       "nom": "Dupont",
       "prenom": "Jean",
+      "mot_de_passe": "dcdsc",
       "email": "jean.dupont@example.com",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
     },
     {
-      "id_utilisateur": "1",
+      "id_utilisateur": "3",
       "nom": "Dupont",
       "prenom": "Jean",
+      "mot_de_passe": "dcdsdscdcsdcdddddd",
       "email": "jean.dupont@example.com",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
