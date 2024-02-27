@@ -140,7 +140,7 @@ function readFileData(filePath, res) {
       return;
     }
     const jsonData = JSON.parse(data);
-    res.json(jsonData);
+    res.json(jsonData.articles);
   });
 }
 
