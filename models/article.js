@@ -1,4 +1,4 @@
-export class Article {
+class Article {
     constructor(id, titre, contenu, auteur, datePublication) {
         this.identifiant = id;
         this.titre = titre;
