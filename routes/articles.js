@@ -25,11 +25,7 @@ function getArticles(req, res) {
 function addArticle(req, res) {
     try {
         const file = './database/articles.json';
-        let content = [];
 
-        readFileData(file, res);
-
-        content = res;
 
         const nouvelArticle = {
             identifiant: req.body.identifiant,
@@ -39,10 +35,8 @@ function addArticle(req, res) {
             datePublication: req.body.datePublication
         };
 
-        content.push(nouvelArticle);
+        console.log(nouvelArticle);
 
-        fs.writeFileSync(file, JSON.stringify(content, null, 2));
-        console.log('Article ajouté avec succès !');
     } catch (error) {
         console.error('Erreur lors de l\'écriture du fichier :', error);
     }
