@@ -30,16 +30,16 @@ function addArticle(req, res) {
         readFileData(file, res);
 
         content = res;
-        //
-        // const nouvelArticle = {
-        //     identifiant: req.body.identifiant,
-        //     titre: req.body.titre,
-        //     contenu: req.body.contenu,
-        //     auteur: req.body.auteur,
-        //     datePublication: req.body.datePublication
-        // };
-        //
-        // content.push(nouvelArticle);
+
+        const nouvelArticle = {
+            identifiant: req.body.identifiant,
+            titre: req.body.titre,
+            contenu: req.body.contenu,
+            auteur: req.body.auteur,
+            datePublication: req.body.datePublication
+        };
+
+        content.push(nouvelArticle);
 
         fs.writeFileSync(file, JSON.stringify(content, null, 2));
         console.log('Article ajouté avec succès !');
