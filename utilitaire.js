@@ -1,16 +1,55 @@
 const fs = require('fs');
 
 // Fonction pour lire les données à partir d'un fichier
-function readFileData(filePath, res) {
-    fs.readFile(filePath, (err, data) => {
-        if (err) {
-            console.error('Erreur de lecture du fichier JSON :', err);
-            return res.status(500).json({ error: 'Erreur interne du serveur' });
-        }
-        const jsonData = JSON.parse(data);
-        const type = filePath.split('/').pop().split('.')[0];
-        res.json(jsonData[type]);
-    });
+function readFileData(filePath) {
+    const data = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(data)
+}
+
+function putArticle(filePath, dataObject) {
+    let articles = readFileData(filePath);
+
+    articles.articles.push(dataObject);
+
+    fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
+
+    console.log("Nouvel article ajouté !");
+    return true;
+}
+
+function removeArticle(filePath, idData) {
+    const idArticleASupprimer = 2;
+
+    const indexArticleASupprimer = articles.articles.findIndex(article => article.identifiant === idArticleASupprimer);
+
+    if (indexArticleASupprimer !== -1) {
+        articles.articles.splice(indexArticleASupprimer, 1);
+
+        fs.writeFileSync('articles.json', JSON.stringify(articles, null, 2));
+
+        console.log("Article supprimé !");
+    } else {
+        console.log("Aucun article avec l'identifiant " + idArticleASupprimer + " n'a été trouvé.");
+    }
+}
+
+function modifyArticle(filepath, dataObject) {
+    const idArticleAModifier = dataObject.identifiant;
+
+    const articleAModifier = articles.articles.find(article => article.identifiant === idArticleAModifier);
+
+    if (articleAModifier) {
+        articleAModifier.titre = dataObject.titre;
+        articleAModifier.contenu = dataObject.contenu;
+
+        fs.writeFileSync(filepath, JSON.stringify(articles, null, 2));
+
+        console.log("Article modifié !");
+        return true;
+    } else {
+        console.log("Aucun article avec l'identifiant " + idArticleAModifier + " n'a été trouvé.");
+        return false;
+    }
 }
 
 
@@ -39,4 +78,5 @@ function readUserData(email, password, res) {
 module.exports = {
     readFileData,
     readUserData,
+    putArticle,
 };
