@@ -13,7 +13,7 @@ router.get('/', getArticles);
 router.post('/add', addArticle);
 
 // Route pour supprimer un article
-router.delete('/:id', deleteArticle);
+router.delete('/remove', deleteArticle);
 
 module.exports = router;
 

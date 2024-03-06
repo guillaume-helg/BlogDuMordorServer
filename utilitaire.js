@@ -9,6 +9,10 @@ function readFileData(filePath) {
 function putArticle(filePath, dataObject) {
     let articles = readFileData(filePath);
 
+    let maxId = Math.max(...articles.articles.map(article => article.identifiant));
+
+    dataObject.identifiant = maxId + 1;
+
     articles.articles.push(dataObject);
 
     fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
@@ -26,7 +30,7 @@ function removeArticle(filePath, idData) {
     if (indexArticleASupprimer !== -1) {
         articles.articles.splice(indexArticleASupprimer, 1);
 
-        fs.writeFileSync('articles.json', JSON.stringify(articles, null, 2));
+        fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
 
         console.log("Article supprimé !");
         return true;
@@ -57,7 +61,6 @@ function modifyArticle(filepath, dataObject) {
         return false;
     }
 }
-
 
 // Fonction pour lire les données utilisateur
 function readUserData(email, password, res) {
