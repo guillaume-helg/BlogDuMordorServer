@@ -3,7 +3,7 @@ const fs = require('fs');
 // Fonction pour lire les données à partir d'un fichier
 function readFileData(filePath) {
     const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data)
+    return JSON.parse(data);
 }
 
 function putArticle(filePath, dataObject) {
@@ -18,7 +18,8 @@ function putArticle(filePath, dataObject) {
 }
 
 function removeArticle(filePath, idData) {
-    const idArticleASupprimer = 2;
+    let articles = readFileData(filePath);
+    const idArticleASupprimer = idData;
 
     const indexArticleASupprimer = articles.articles.findIndex(article => article.identifiant === idArticleASupprimer);
 
@@ -28,19 +29,24 @@ function removeArticle(filePath, idData) {
         fs.writeFileSync('articles.json', JSON.stringify(articles, null, 2));
 
         console.log("Article supprimé !");
+        return true;
     } else {
         console.log("Aucun article avec l'identifiant " + idArticleASupprimer + " n'a été trouvé.");
+        return false;
     }
 }
 
 function modifyArticle(filepath, dataObject) {
+    let articles = readFileData(filepath);
     const idArticleAModifier = dataObject.identifiant;
 
     const articleAModifier = articles.articles.find(article => article.identifiant === idArticleAModifier);
 
     if (articleAModifier) {
         articleAModifier.titre = dataObject.titre;
+        articleAModifier.auteur = dataObject.auteur;
         articleAModifier.contenu = dataObject.contenu;
+        articleAModifier.date_publication = dataObject.date_publication;
 
         fs.writeFileSync(filepath, JSON.stringify(articles, null, 2));
 
@@ -79,4 +85,6 @@ module.exports = {
     readFileData,
     readUserData,
     putArticle,
+    removeArticle,
+    modifyArticle
 };
