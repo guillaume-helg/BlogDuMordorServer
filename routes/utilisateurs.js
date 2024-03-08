@@ -1,4 +1,4 @@
-const { readFileData, readUserData } = require('../utilitaire');
+const { readFileData, readUserData } = require('../utilsUtilisateur');
 
 const express = require('express');
 const fs = require('fs');

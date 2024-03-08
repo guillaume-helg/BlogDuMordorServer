@@ -1,6 +1,5 @@
 const express = require('express');
-const fs = require('fs');
-const { putArticle, removeArticle, modifyArticle, readFileData } = require("../utilitaire");
+const { putArticle, removeArticle, modifyArticle, readFileData } = require("../utilsArticle");
 const filePath = './database/articles.json'
 const router = express.Router();
 
