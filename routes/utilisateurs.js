@@ -1,48 +1,67 @@
-const { readFileData, readUserData } = require('../utilsUtilisateur');
+const { readUserData, createUser, modifyUser, deleteUser, connectUser} = require('../utilsUtilisateur');
 
 const express = require('express');
 const fs = require('fs');
+const {removeArticle} = require("../utilsArticle");
+const filePath = './database/utilisateurs.json'
+
 
 const router = express.Router();
 
-// Route pour connecter un utilisateur
-router.post('/login', loginUser);
+// Route pour récupérer tous les articles
+router.get('/', getUtilisateur);
 
-// Route pour inscrire un nouvel utilisateur
-router.post('/signup', signupUser);
+router.get('/login', loginUser);
+
+// Route pour ajouter un nouvel article
+router.post('/add', addUtilisateur);
+
+// Route pour modifier un article
+router.post('/modify', alterUtilisateur)
+
+// Route pour supprimer un article
+router.delete('/remove', deleteUtilisateur);
 
 module.exports = router;
 
-// Fonction pour connecter un utilisateur
-function loginUser(req, res) {
-    const { email, password } = req.body;
-    readUserData(email, password, res);
+function getUtilisateur(req, res) {
+    res.json(readUserData(filePath));
 }
 
-// Fonction pour inscrire un nouvel utilisateur
-function signupUser(req, res) {
-    const newUser = req.body; // Supposons que req.body contient les détails du nouvel utilisateur
+function addUtilisateur(req, res) {
+    const nouvelUtilisateur = {
+        identifiant: 4,
+        nom: req.body.nom,
+        prenom: req.body.prenom,
+        email: req.body.email,
+        motDePasse: req.body.motDePasse,
+        numeroTelephone: req.body.numeroTelephone,
+        id_blog_utilisateur: req.body.id_blog_utilisateur
 
-    fs.readFile('utilisateurs.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erreur de lecture du fichier JSON :', err);
-            return res.status(500).json({ error: 'Erreur interne du serveur' });
-        }
+    };
 
-        try {
-            const utilisateurs = JSON.parse(data);
-            utilisateurs.push(newUser); // Ajouter le nouvel utilisateur au tableau
+    res.json(createUser(filePath, nouvelUtilisateur));
+}
 
-            fs.writeFile('utilisateurs.json', JSON.stringify(utilisateurs), 'utf8', (err) => {
-                if (err) {
-                    console.error('Erreur d\'écriture du fichier JSON :', err);
-                    return res.status(500).json({ error: 'Erreur interne du serveur' });
-                }
-                res.status(201).json({ message: 'Utilisateur ajouté avec succès' });
-            });
-        } catch (error) {
-            console.error('Erreur lors de l\'analyse du fichier JSON :', error);
-            res.status(500).json({ error: 'Erreur interne du serveur' });
-        }
-    });
+function alterUtilisateur(req, res) {
+    const modifUtilisateur = {
+        identifiant: 4,
+        nom: req.body.nom,
+        prenom: req.body.prenom,
+        email: req.body.email,
+        motDePasse: req.body.motDePasse,
+        numeroTelephone: req.body.numeroTelephone,
+        id_blog_utilisateur: req.body.id_blog_utilisateur
+
+    };
+
+    res.json(modifyUser(filePath, modifUtilisateur));
+}
+
+function deleteUtilisateur(req, res) {
+    res.json(deleteUser(filePath, req.body.identifiant));
+}
+// Fonction pour connecter un utilisateur
+function loginUser(req, res) {
+    res.json(connectUser(filePath, req.body.nom, req.body.motDePasse));
 }
