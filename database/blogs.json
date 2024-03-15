@@ -2,21 +2,25 @@
     {
       "identifiant": 1,
       "nom": "Blog du Saint",
-      "id_auteur": "Aie",
+      "idAuteur": 1,
+      "idArticles": [
+
+      ],
+      "droitAcces": [
+
+      ]
+    },
+    {
+      "identifiant": 1,
+      "nom": "Blog du Saint",
+      "id_auteur": 2,
       "droitAcces": [
       ]
     },
     {
       "identifiant": 1,
       "nom": "Blog du Saint",
-      "id_auteur": "Aie",
-      "droitAcces": [
-      ]
-    },
-    {
-      "identifiant": 1,
-      "nom": "Blog du Saint",
-      "id_auteur": "Aie",
+      "id_auteur": 3,
       "droitAcces": [
       ]
     }

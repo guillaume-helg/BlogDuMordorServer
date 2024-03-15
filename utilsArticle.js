@@ -1,5 +1,4 @@
 const fs = require('fs');
-const {json} = require("express");
 
 // Fonction pour lire les données à partir d'un fichier
 function readFileData(filePath) {
@@ -8,6 +7,7 @@ function readFileData(filePath) {
     return jsonData;
 }
 
+// Fonction pour ajouter un nouvel article à la base de donnée
 function putArticle(filePath, dataObject) {
     let articles = readFileData(filePath);
 
@@ -23,6 +23,7 @@ function putArticle(filePath, dataObject) {
     return true;
 }
 
+// Fonction pour supprimer un article à la base de donnée
 function removeArticle(filePath, idData) {
     let articles = readFileData(filePath);
     const idArticleASupprimer = idData;
@@ -42,6 +43,7 @@ function removeArticle(filePath, idData) {
     }
 }
 
+// Fonction pour modifier un article de la base de donnée
 function modifyArticle(filepath, dataObject) {
     let articles = readFileData(filepath);
     const idArticleAModifier = dataObject.identifiant;

@@ -11,7 +11,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Middleware pour parser le corps de la requête en JSON
 app.use(express.json());
 
 // Routage des requêtes

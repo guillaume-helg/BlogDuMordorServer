@@ -1,6 +1,7 @@
 const { readUserData, createUser, modifyUser, deleteUser, connectUser} = require('../utilsUtilisateur');
 const express = require('express');
 const filePath = './database/utilisateurs.json'
+const { createBlog } = require('../utilsBlog');
 
 const router = express.Router();
 
@@ -32,8 +33,7 @@ function addUtilisateur(req, res) {
         email: req.body.email,
         motDePasse: req.body.motDePasse,
         numeroTelephone: req.body.numeroTelephone,
-        id_blog_utilisateur: req.body.id_blog_utilisateur
-
+        idBlog: 0
     };
 
     res.json(createUser(filePath, nouvelUtilisateur));
@@ -54,12 +54,11 @@ function alterUtilisateur(req, res) {
     res.json(modifyUser(filePath, modifUtilisateur));
 }
 
+// Fonction pour supprimer un utilisateur avec son id
 function deleteUtilisateur(req, res) {
     res.json(deleteUser(filePath, req.body.identifiant));
 }
 // Fonction pour connecter un utilisateur
 function loginUser(req, res) {
-    console.log("yay");
     res.json(connectUser(filePath, req.body.email, req.body.password));
-
 }

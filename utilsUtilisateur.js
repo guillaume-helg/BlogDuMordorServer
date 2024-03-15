@@ -1,4 +1,5 @@
 const fs = require('fs');
+const {createBlog} = require("./utilsBlog");
 
 function readUserData(filePath) {
     let data = fs.readFileSync(filePath, 'utf-8');
@@ -12,6 +13,7 @@ function createUser(filePath, dataObject) {
     let maxId = Math.max(...utilisateurs.map(article => article.identifiant));
 
     dataObject.identifiant = maxId + 1;
+    dataObject.idBlog = createBlog(filePath, dataObject);
 
     utilisateurs.push(dataObject);
 
@@ -70,8 +72,12 @@ function connectUser(filePath, mail, password) {
         throw new Error(`Utilisateur "${mail}" non trouvé.`);
     }
 
-    console.log(password);
+    if(!utilisateur.motDePasse === password) {
+        throw new Error(`Utilisateur ${password} mauvais.`);
+    }
+
     console.log(mail);
+    console.log(password);
 
     return utilisateur.motDePasse === password;
 }

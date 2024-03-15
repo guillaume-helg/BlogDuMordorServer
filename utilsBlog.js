@@ -16,26 +16,46 @@ function readBlogById(filePath, idUser) {
     }
 }
 
-function createNewBlog() {
+function createBlog(filepath, user) {
+    let blogs = readBlogData(filepath);
 
+    const blog = {
+        identifiant : user.identifiant,
+        nom: `Blog de ${user.nom}`,
+        id_auteur: user.identifiant,
+        droitAcces: [
+            user.identifiant
+        ]
+    }
+
+    blogs.add(blog);
+
+    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
+
+    return blog.identifiant;
 }
 
-function manageRight() {
+function addRight(filepath, idBlog, idUser, numRight) {
+    let blogs = readBlogData(filepath);
 
+    let blog = blogs.find(blog => blog.identifiant === idBlog);
+
+    blog.droitAcces.add(idUser);
+
+    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 }
 
-function addRight() {
+function suppressRight(filepath, idBlog, idUser, numRight) {
+    let blogs = readBlogData(filepath);
 
-}
+    let blog = blogs.find(blog => blog.identifiant === idBlog);
 
-function suppressRight() {
+    blog.droitAcces.remove(idUser);
 
-}
-
-function deleteBlog() {
-
+    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 }
 
 module.exports = {
-    readBlogData
+    readBlogData,
+    createBlog,
 };
