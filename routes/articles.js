@@ -21,6 +21,7 @@ function getArticles(req, res) {
     res.json(readFileData(filePath));
 }
 
+// A
 function addArticle(req, res) {
     const nouvelArticle = {
         identifiant: 4,
@@ -38,6 +39,7 @@ function deleteArticle(req, res) {
     res.json(removeArticle(filePath, req.body.identifiant));
 }
 
+// Modification de l'article
 function alterArticle(req, res) {
     const modifArticle = {
         identifiant: req.body.identifiant,

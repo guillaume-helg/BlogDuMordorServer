@@ -7,7 +7,7 @@ const router = express.Router();
 // Route pour récupérer tous les articles
 router.get('/', getUtilisateur);
 
-router.get('/login', loginUser);
+router.post('/login', loginUser);
 
 // Route pour ajouter un nouvel article
 router.post('/add', addUtilisateur);
@@ -60,6 +60,6 @@ function deleteUtilisateur(req, res) {
 // Fonction pour connecter un utilisateur
 function loginUser(req, res) {
     console.log("yay");
-    res.json(connectUser(filePath, req.body.email, req.body.motDePasse));
+    res.json(connectUser(filePath, req.body.email, req.body.password));
 
 }
