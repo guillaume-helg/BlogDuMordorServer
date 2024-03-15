@@ -1,11 +1,10 @@
-{
-  "utilisateurs": [
+[
     {
       "id_utilisateur": "1",
       "nom": "Dupont",
       "prenom": "Jean",
       "email": "jean.dupont@example.com",
-      "mot_de_passe": "dcdsdscdcsdc",
+      "motDePasse": "dc",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
     },
@@ -13,8 +12,8 @@
       "id_utilisateur": "2",
       "nom": "Dupont",
       "prenom": "Jean",
-      "mot_de_passe": "dcdsc",
-      "email": "jean.dupont@example.com",
+      "motDePasse": "dcdsc",
+      "email": "jean.dupont@exaple.com",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
     },
@@ -22,10 +21,10 @@
       "id_utilisateur": "3",
       "nom": "Dupont",
       "prenom": "Jean",
-      "mot_de_passe": "dcdsdscdcsdcdddddd",
-      "email": "jean.dupont@example.com",
+      "motDePasse": "dcdsdscdcsdcdddddd",
+      "email": "jean.dupont@exale.com",
       "numero_telephone": "+1234567890",
       "id_blog_utilisateur": "101"
     }
-  ]
-}
+]
+

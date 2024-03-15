@@ -1,10 +1,6 @@
 const { readUserData, createUser, modifyUser, deleteUser, connectUser} = require('../utilsUtilisateur');
-
 const express = require('express');
-const fs = require('fs');
-const {removeArticle} = require("../utilsArticle");
 const filePath = './database/utilisateurs.json'
-
 
 const router = express.Router();
 
@@ -63,5 +59,7 @@ function deleteUtilisateur(req, res) {
 }
 // Fonction pour connecter un utilisateur
 function loginUser(req, res) {
-    res.json(connectUser(filePath, req.body.nom, req.body.motDePasse));
+    console.log("yay");
+    res.json(connectUser(filePath, req.body.email, req.body.motDePasse));
+
 }

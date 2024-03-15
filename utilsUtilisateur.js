@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 function readUserData(filePath) {
     let data = fs.readFileSync(filePath, 'utf-8');
     let jsonData = JSON.parse(data);
@@ -63,13 +62,16 @@ function deleteUser(filePath, idData) {
     }
 }
 
-function connectUser(filePath, name, password) {
-    let utilisateurs = readUserData(filePath);
-    const utilisateur = utilisateurs.find(utilisateur => utilisateur.nom === name);
+function connectUser(filePath, mail, password) {
+    const utilisateurs = readUserData(filePath);
+    const utilisateur = utilisateurs.find(utilisateur => utilisateur.email === mail);
 
     if (!utilisateur) {
-        throw new Error(`Utilisateur "${name}" non trouvé.`);
+        throw new Error(`Utilisateur "${mail}" non trouvé.`);
     }
+
+    console.log(password);
+    console.log(mail);
 
     return utilisateur.motDePasse === password;
 }

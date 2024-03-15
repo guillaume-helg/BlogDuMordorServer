@@ -29,7 +29,6 @@ function addBlog(req, res) {
 }
 
 function modifyBlog(req, res) {
-
 }
 
 function deleteBlog(req, res) {
