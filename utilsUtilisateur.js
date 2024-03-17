@@ -79,7 +79,11 @@ function connectUser(filePath, mail, password) {
     console.log(mail);
     console.log(password);
 
-    return utilisateur.motDePasse === password;
+    if(utilisateur.motDePasse === password) {
+        return utilisateur;
+    }
+
+    return undefined;
 }
 
 module.exports = {

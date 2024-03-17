@@ -13,7 +13,7 @@ router.post('/add', addArticle);
 router.post('/modify', alterArticle)
 
 // Route pour supprimer un article
-router.delete('/remove', deleteArticle);
+router.delete('/remove/:id', deleteArticle);
 
 module.exports = router;
 
@@ -36,7 +36,7 @@ function addArticle(req, res) {
 
 // Suppression de l'article
 function deleteArticle(req, res) {
-    res.json(removeArticle(filePath, req.body.identifiant));
+    res.json(removeArticle(filePath, req.params.id));
 }
 
 // Modification de l'article

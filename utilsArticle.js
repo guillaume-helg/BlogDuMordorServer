@@ -26,8 +26,7 @@ function putArticle(filePath, dataObject) {
 // Fonction pour supprimer un article à la base de donnée
 function removeArticle(filePath, idData) {
     let articles = readFileData(filePath);
-    const idArticleASupprimer = idData;
-    console.log(articles);
+    const idArticleASupprimer = parseInt(idData);
     const indexArticleASupprimer = articles.findIndex(article => article.identifiant === idArticleASupprimer);
 
     if (indexArticleASupprimer !== -1) {
