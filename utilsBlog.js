@@ -28,7 +28,7 @@ function createBlog(filepath, user) {
         ]
     }
 
-    blogs.add(blog);
+    //blogs.add(blog);
 
     fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 

@@ -13,7 +13,7 @@ function createUser(filePath, dataObject) {
     let maxId = Math.max(...utilisateurs.map(article => article.identifiant));
 
     dataObject.identifiant = maxId + 1;
-    dataObject.idBlog = createBlog(filePath, dataObject);
+    dataObject.idBlog = 2//createBlog(filePath, dataObject);
 
     utilisateurs.push(dataObject);
 
