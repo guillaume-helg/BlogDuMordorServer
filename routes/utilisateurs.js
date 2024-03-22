@@ -17,14 +17,16 @@ router.post('/add', addUtilisateur);
 router.post('/modify', alterUtilisateur)
 
 // Route pour supprimer un article
-router.delete('/remove', deleteUtilisateur);
+router.delete('/remove/:id', deleteUtilisateur);
 
 module.exports = router;
 
+// Récupère tout les utilisateurs
 function getUtilisateur(req, res) {
     res.json(readUserData(filePath));
 }
 
+// Ajoute un utilisateur
 function addUtilisateur(req, res) {
     const nouvelUtilisateur = {
         identifiant: 4,
@@ -39,6 +41,7 @@ function addUtilisateur(req, res) {
     res.json(createUser(filePath, nouvelUtilisateur));
 }
 
+// Modifie un utilisateur
 function alterUtilisateur(req, res) {
     const modifUtilisateur = {
         identifiant: 4,
@@ -56,8 +59,9 @@ function alterUtilisateur(req, res) {
 
 // Fonction pour supprimer un utilisateur avec son id
 function deleteUtilisateur(req, res) {
-    res.json(deleteUser(filePath, req.body.identifiant));
+    res.json(deleteUser(filePath, req.params.id));
 }
+
 // Fonction pour connecter un utilisateur
 function loginUser(req, res) {
     res.json(connectUser(filePath, req.body.email, req.body.password));

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {createBlog} = require("./utilsBlog");
+const {createBlog, deleteBlog} = require("./utilsBlog");
 
 function readUserData(filePath) {
     let data = fs.readFileSync(filePath, 'utf-8');
@@ -13,7 +13,9 @@ function createUser(filePath, dataObject) {
     let maxId = Math.max(...utilisateurs.map(article => article.identifiant));
 
     dataObject.identifiant = maxId + 1;
-    dataObject.idBlog = 2//createBlog(filePath, dataObject);
+    dataObject.idBlog = maxId + 1;
+
+    createBlog('./database/blogs.json', dataObject);
 
     utilisateurs.push(dataObject);
 
@@ -47,12 +49,13 @@ function modifyUser(filepath, dataObject) {
 
 function deleteUser(filePath, idData) {
     let utilisateurs = readUserData(filePath);
-    const idUtilisateurASupprimer = idData;
-    console.log(utilisateurs);
+    const idUtilisateurASupprimer = parseInt(idData);
     const indexUtilisateurASupprimer = utilisateurs.findIndex(utilisateur => utilisateur.identifiant === idUtilisateurASupprimer);
 
     if (indexUtilisateurASupprimer !== -1) {
         utilisateurs.splice(indexUtilisateurASupprimer, 1);
+
+        deleteBlog('./database/blogs.json', idData);
 
         fs.writeFileSync(filePath, JSON.stringify(utilisateurs, null, 2));
 

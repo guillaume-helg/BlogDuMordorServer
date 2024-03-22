@@ -1,28 +1,18 @@
 [
-    {
-      "identifiant": 1,
-      "nom": "Blog du Saint",
-      "idAuteur": 1,
-      "idArticles": [
-
-      ],
-      "droitAcces": [
-
-      ]
-    },
-    {
-      "identifiant": 1,
-      "nom": "Blog du Saint",
-      "id_auteur": 2,
-      "droitAcces": [
-      ]
-    },
-    {
-      "identifiant": 1,
-      "nom": "Blog du Saint",
-      "id_auteur": 3,
-      "droitAcces": [
-      ]
-    }
+  {
+    "identifiant": 1,
+    "nom": "Blog du Saint",
+    "idAuteur": 1,
+    "idArticles": [],
+    "droitAcces": []
+  },
+  {
+    "identifiant": 2,
+    "nom": "Blog de guillaume",
+    "idAuteur": 2,
+    "idArticles": [],
+    "droitAcces": [
+      2
+    ]
+  }
 ]
-

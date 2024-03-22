@@ -6,6 +6,7 @@ function readBlogData(filePath) {
     return JSON.parse(data);
 }
 
+// Fonction pour retouner tout les blogs auquels l'utilisateur à accès
 function readBlogById(filePath, idUser) {
     let blogs = readBlogData(filePath);
     let blogsDisponibles;
@@ -16,26 +17,56 @@ function readBlogById(filePath, idUser) {
     }
 }
 
+// Fonction qui créer un blog
 function createBlog(filepath, user) {
     let blogs = readBlogData(filepath);
 
+    console.log(blogs);
+
     const blog = {
-        identifiant : user.identifiant,
+        identifiant: user.identifiant,
         nom: `Blog de ${user.nom}`,
-        id_auteur: user.identifiant,
+        idAuteur: user.identifiant,
+        idArticles: [
+    ],
         droitAcces: [
             user.identifiant
-        ]
+    ]
     }
 
-    //blogs.add(blog);
+    console.log(blog);
+
+    blogs.push(blog);
 
     fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
-
-    return blog.identifiant;
 }
 
-function addRight(filepath, idBlog, idUser, numRight) {
+// Fonction qui met la visibilité de blog à public
+function setBlogPublic(filepath, idBlog) {
+    let blogs = readBlogData(filepath);
+
+    let blog = blogs.find(blog => blog.identifiant === idBlog);
+
+    blog.droitAcces.splice(0, blog.droitAcces.length);
+
+    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
+}
+
+// Met la visibilité de blog à privé
+function setBlogPrivate(filepath, idBlog) {
+    let blogs = readBlogData(filepath);
+
+    let blog = blogs.find(blog => blog.identifiant === idBlog);
+
+    blog.droitAcces.splice(0, blog.droitAcces.length);
+
+    blog.droitAcces.add(idBlog); // le idUtilisateur est le même que l'id du blog
+
+    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
+}
+
+// Ajoute un accès utilisateur à un blog
+function addRight(filepath, idBlog, idUser) {
     let blogs = readBlogData(filepath);
 
     let blog = blogs.find(blog => blog.identifiant === idBlog);
@@ -45,17 +76,30 @@ function addRight(filepath, idBlog, idUser, numRight) {
     fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 }
 
-function suppressRight(filepath, idBlog, idUser, numRight) {
-    let blogs = readBlogData(filepath);
+// Supprime un blog
+function deleteBlog(filePath, idData) {
+    let blogs = readBlogData(filePath);
+    const idBlogASupprimer = parseInt(idData);
+    const indexBlogASupprimer = blogs.findIndex(blog => blog.identifiant === idBlogASupprimer);
 
-    let blog = blogs.find(blog => blog.identifiant === idBlog);
+    if (indexBlogASupprimer !== -1) {
+        blogs.splice(indexBlogASupprimer, 1);
 
-    blog.droitAcces.remove(idUser);
+        fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
 
-    fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
+        console.log("Blog supprimé !");
+        return true;
+    } else {
+        console.log("Aucun blog avec l'identifiant " + idBlogASupprimer + " n'a été trouvé.");
+        return false;
+    }
 }
 
 module.exports = {
     readBlogData,
     createBlog,
+    deleteBlog,
+    addRight,
+    setBlogPublic,
+    setBlogPrivate
 };
