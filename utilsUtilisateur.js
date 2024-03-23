@@ -32,10 +32,12 @@ function modifyUser(filepath, dataObject) {
     const utilisateurAModifier = utilisateurs.find(utilisateur => utilisateur.identifiant === idUtilisateurAModifier);
 
     if (utilisateurAModifier) {
-        utilisateurAModifier.titre = dataObject.titre;
-        utilisateurAModifier.auteur = dataObject.auteur;
-        utilisateurAModifier.contenu = dataObject.contenu;
-        utilisateurAModifier.date_publication = dataObject.date_publication;
+        utilisateurAModifier.nom = dataObject.nom;
+        utilisateurAModifier.prenom = dataObject.prenom;
+        utilisateurAModifier.email = dataObject.email;
+        utilisateurAModifier.motDePasse = dataObject.motDePasse;
+        utilisateurAModifier.numeroTelephone = dataObject.numeroTelephone;
+
 
         fs.writeFileSync(filepath, JSON.stringify(utilisateurs, null, 2));
 
