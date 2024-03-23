@@ -44,14 +44,13 @@ function addUtilisateur(req, res) {
 // Modifie un utilisateur
 function alterUtilisateur(req, res) {
     const modifUtilisateur = {
-        identifiant: 4,
+        identifiant: req.body.identifiant,
         nom: req.body.nom,
         prenom: req.body.prenom,
         email: req.body.email,
         motDePasse: req.body.motDePasse,
         numeroTelephone: req.body.numeroTelephone,
-        id_blog_utilisateur: req.body.id_blog_utilisateur
-
+        id_blog_utilisateur: req.body.idBlog
     };
 
     res.json(modifyUser(filePath, modifUtilisateur));

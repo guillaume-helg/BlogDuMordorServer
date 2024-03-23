@@ -38,13 +38,12 @@ function modifyUser(filepath, dataObject) {
         utilisateurAModifier.motDePasse = dataObject.motDePasse;
         utilisateurAModifier.numeroTelephone = dataObject.numeroTelephone;
 
-
         fs.writeFileSync(filepath, JSON.stringify(utilisateurs, null, 2));
 
-        console.log("Article modifié !");
+        console.log("Compte modifié !");
         return true;
     } else {
-        console.log("Aucun article avec l'identifiant " + idUtilisateurAModifier + " n'a été trouvé.");
+        console.log("Compte article avec l'identifiant " + idUtilisateurAModifier + " n'a été trouvé.");
         return false;
     }
 }

@@ -5,14 +5,5 @@
     "idAuteur": 1,
     "idArticles": [],
     "droitAcces": []
-  },
-  {
-    "identifiant": 2,
-    "nom": "Blog de guillaume",
-    "idAuteur": 2,
-    "idArticles": [],
-    "droitAcces": [
-      2
-    ]
   }
 ]
