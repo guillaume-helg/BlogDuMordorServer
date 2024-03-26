@@ -36,7 +36,7 @@ function removeArticle(filePath, idData) {
         articles.splice(indexArticleASupprimer, 1);
 
         fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
-        removeArticleToBlog('./database/blogs.json', articleASupprimer.idAuteur, idData)
+        removeArticleToBlog('./database/blogs.json', articleASupprimer.idAuteur, idArticleASupprimer);
         console.log("Article supprimé !");
         return true;
     } else {
