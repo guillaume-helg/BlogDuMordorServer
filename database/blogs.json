@@ -5,5 +5,14 @@
     "idAuteur": 1,
     "idArticles": [],
     "droitAcces": []
+  },
+  {
+    "identifiant": 2,
+    "nom": "Blog de helg",
+    "idAuteur": 2,
+    "idArticles": [],
+    "droitAcces": [
+      2
+    ]
   }
 ]

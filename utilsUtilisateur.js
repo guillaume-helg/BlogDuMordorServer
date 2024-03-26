@@ -1,12 +1,14 @@
 const fs = require('fs');
 const {createBlog, deleteBlog} = require("./utilsBlog");
 
+// Fonction pour lire les données utilisateur
 function readUserData(filePath) {
     let data = fs.readFileSync(filePath, 'utf-8');
     let jsonData = JSON.parse(data);
     return jsonData;
 }
 
+// Fonction pour creer un utilisateur et le blog associé
 function createUser(filePath, dataObject) {
     let utilisateurs = readUserData(filePath);
 
@@ -25,6 +27,7 @@ function createUser(filePath, dataObject) {
     return true;
 }
 
+// Fonction pour modifier des paramètres d'un utilisateur
 function modifyUser(filepath, dataObject) {
     let utilisateurs = readUserData(filepath);
     const idUtilisateurAModifier = dataObject.identifiant;
@@ -48,6 +51,7 @@ function modifyUser(filepath, dataObject) {
     }
 }
 
+// Fonctions utilisée pour supprimer un utilisateur dont son id est en paramètre
 function deleteUser(filePath, idData) {
     let utilisateurs = readUserData(filePath);
     const idUtilisateurASupprimer = parseInt(idData);
@@ -56,7 +60,7 @@ function deleteUser(filePath, idData) {
     if (indexUtilisateurASupprimer !== -1) {
         utilisateurs.splice(indexUtilisateurASupprimer, 1);
 
-        deleteBlog('./database/blogs.json', idData);
+        deleteBlog('./database/blogs.json', idData); // On supprime aussi le blog lié à l'utilisateur
 
         fs.writeFileSync(filePath, JSON.stringify(utilisateurs, null, 2));
 
@@ -68,6 +72,7 @@ function deleteUser(filePath, idData) {
     }
 }
 
+// Fonction utilisée pour connecter l'utilisateur au site
 function connectUser(filePath, mail, password) {
     const utilisateurs = readUserData(filePath);
     const utilisateur = utilisateurs.find(utilisateur => utilisateur.email === mail);

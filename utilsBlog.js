@@ -95,11 +95,37 @@ function deleteBlog(filePath, idData) {
     }
 }
 
+function addArticleToBlog(filePath, idBlog, idArticle) {
+    let blogs = readBlogData(filePath);
+
+    const blogAModifier = blogs.find(blog => blog.identifiant === idBlog);
+
+    if (blogAModifier) {
+        blogAModifier.idArticles.push(idArticle);
+        fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
+        console.log("article ajouté au blog");
+    }
+}
+
+function removeArticleToBlog(filePath, idBlog, idArticle) {
+    let blogs = readBlogData(filePath);
+
+    const blogAModifier = blogs.find(blog => blog.identifiant === idBlog);
+
+    if (blogAModifier) {
+        blogAModifier.idArticles.splice(idArticle, 1);
+        fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
+        console.log("article ajouté au blog");
+    }
+}
+
 module.exports = {
     readBlogData,
     createBlog,
     deleteBlog,
     addRight,
     setBlogPublic,
-    setBlogPrivate
+    setBlogPrivate,
+    addArticleToBlog,
+    removeArticleToBlog
 };

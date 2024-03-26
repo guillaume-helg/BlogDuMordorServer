@@ -1,4 +1,5 @@
 const fs = require('fs');
+const {addArticleToBlog, removeArticleToBlog} = require("./utilsBlog");
 
 // Fonction pour lire les données à partir d'un fichier
 function readFileData(filePath) {
@@ -17,6 +18,8 @@ function putArticle(filePath, dataObject) {
 
     articles.push(dataObject);
 
+    addArticleToBlog('./database/blogs.json', dataObject.idAuteur, dataObject.identifiant)
+
     fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
 
     console.log("Nouvel article ajouté !");
@@ -28,12 +31,12 @@ function removeArticle(filePath, idData) {
     let articles = readFileData(filePath);
     const idArticleASupprimer = parseInt(idData);
     const indexArticleASupprimer = articles.findIndex(article => article.identifiant === idArticleASupprimer);
-
+    const articleASupprimer = articles.find(article => article.identifiant === idArticleASupprimer);
     if (indexArticleASupprimer !== -1) {
         articles.splice(indexArticleASupprimer, 1);
 
         fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
-
+        removeArticleToBlog('./database/blogs.json', articleASupprimer.idAuteur, idData)
         console.log("Article supprimé !");
         return true;
     } else {
@@ -51,7 +54,6 @@ function modifyArticle(filepath, dataObject) {
 
     if (articleAModifier) {
         articleAModifier.titre = dataObject.titre;
-        articleAModifier.auteur = dataObject.auteur;
         articleAModifier.contenu = dataObject.contenu;
         articleAModifier.date_publication = dataObject.date_publication;
 

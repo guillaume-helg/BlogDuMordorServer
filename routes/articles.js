@@ -26,6 +26,7 @@ function addArticle(req, res) {
     const nouvelArticle = {
         identifiant: 4,
         auteur: req.body.auteur,
+        idAuteur: req.body.idAuteur,
         titre: req.body.titre,
         contenu: req.body.contenu,
         date_publication: req.body.date_publication
@@ -44,6 +45,7 @@ function alterArticle(req, res) {
     const modifArticle = {
         identifiant: req.body.identifiant,
         auteur: req.body.auteur,
+        idAuteur: req.body.idAuteur,
         titre: req.body.titre,
         contenu: req.body.contenu,
         date_publication: req.body.date_publication

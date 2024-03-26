@@ -5,7 +5,16 @@
     "prenom": "Jea",
     "email": "jean.dupont@example.com",
     "motDePasse": "dc",
-    "numeroTelephone": "007",
+    "numeroTelephone": "008",
     "idBlog": "1"
+  },
+  {
+    "identifiant": 2,
+    "nom": "helg",
+    "prenom": "Guigz",
+    "email": "guigz@gmail.com",
+    "motDePasse": "moncul",
+    "numeroTelephone": "222",
+    "idBlog": 2
   }
 ]
