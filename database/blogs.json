@@ -3,16 +3,30 @@
     "identifiant": 1,
     "nom": "Blog du Saint",
     "idAuteur": 1,
-    "idArticles": [],
+    "idArticles": [3 ,2],
     "droitAcces": []
   },
   {
     "identifiant": 2,
     "nom": "Blog de helg",
     "idAuteur": 2,
-    "idArticles": [],
+    "idArticles": [3 ,2],
     "droitAcces": [
+      3,
       2
+    ]
+  },
+  {
+    "identifiant": 3,
+    "nom": "Blog de helg",
+    "idAuteur": 3,
+    "idArticles": [
+    4,
+      5
+    ],
+    "droitAcces": [
+      3,
+      12
     ]
   }
 ]

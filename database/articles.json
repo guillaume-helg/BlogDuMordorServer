@@ -1,8 +1,32 @@
 [
   {
+    "identifiant": 2,
+    "auteur": "francis",
+    "idAuteur": 1,
+    "titre": "Ceci est un test",
+    "contenu": "Saaaaaaaalutt",
+    "date_publication": null
+  },
+  {
     "identifiant": 3,
     "auteur": "francis",
     "idAuteur": 1,
+    "titre": "Ceci est un test",
+    "contenu": "Saaaaaaaalutt",
+    "date_publication": null
+  },
+  {
+    "identifiant": 5,
+    "auteur": "francis",
+    "idAuteur": 3,
+    "titre": "Ceci est un test",
+    "contenu": "Saaaaaaaalutt",
+    "date_publication": null
+  },
+  {
+    "identifiant": 4,
+    "auteur": "francis",
+    "idAuteur": 3,
     "titre": "Ceci est un test",
     "contenu": "Saaaaaaaalutt",
     "date_publication": null

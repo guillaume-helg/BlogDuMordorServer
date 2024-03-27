@@ -26,7 +26,7 @@ function getBlogs(req, res) {
 
 // Ajoute un utilisateur à un blog
 function inviteUser(req, res) {
-    addRight(filePath, req.body.idBlog, req.body.idUser);
+    addRight(filePath, req.body.idBlog, parseInt(req.body.idUser));
 }
 
 // Change la visibilité d'un blog en public

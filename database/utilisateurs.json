@@ -16,5 +16,16 @@
     "motDePasse": "moncul",
     "numeroTelephone": "222",
     "idBlog": 2
+  },
+  {
+    "identifiant": 3,
+    "nom": "helg",
+    "prenom": "Guigz",
+    "email": "test@gmail.com",
+    "motDePasse": "1234",
+    "numeroTelephone": "222",
+    "idBlog": 2
   }
+
+
 ]

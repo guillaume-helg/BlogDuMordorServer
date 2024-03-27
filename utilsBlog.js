@@ -60,7 +60,7 @@ function setBlogPrivate(filepath, idBlog) {
 
     blog.droitAcces.splice(0, blog.droitAcces.length);
 
-    blog.droitAcces.add(idBlog); // le idUtilisateur est le même que l'id du blog
+    blog.droitAcces.push(idBlog); // le idUtilisateur est le même que l'id du blog
 
     fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 }
@@ -71,7 +71,7 @@ function addRight(filepath, idBlog, idUser) {
 
     let blog = blogs.find(blog => blog.identifiant === idBlog);
 
-    blog.droitAcces.add(idUser);
+    blog.droitAcces.push(idUser);
 
     fs.writeFileSync(filepath, JSON.stringify(blogs, null, 2));
 }
