@@ -1,34 +1,90 @@
 [
   {
+    "identifiant": 1,
+    "auteur": "francis",
+    "idAuteur": 3,
+    "titre": "Article de Romain",
+    "contenu": "Ce n’est plus un secret pour personne, Mandatory a posé ses valises à Montpellier, ainsi que ses serviettes de plage. Alors que chacun jouait de chez lui, en dehors d’occasionnels bootcamps à Lyon, toute l’équipe Valorant est désormais réunie dans le Sud ! Après quelques mois de transition, ils ont investi les nouveaux locaux et profitent du confort d’une Gaming Room dédiée. Et qu’on se le dise, ils s’entraînent d’arrache-pied pour tout casser dans les Challengers France 2024 !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
     "identifiant": 2,
     "auteur": "francis",
-    "idAuteur": 1,
-    "titre": "Ceci est un test",
-    "contenu": "Saaaaaaaalutt",
-    "date_publication": null
+    "idAuteur": 3,
+    "titre": "Mon deuxième article ",
+    "contenu": "Ce n’est plus un secret pour personne, Mandatory a posé ses valises à Montpellier, ainsi que ses serviettes de plage. Alors que chacun jouait de chez lui, en dehors d’occasionnels bootcamps à Lyon, toute l’équipe Valorant est désormais réunie dans le Sud ! Après quelques mois de transition, ils ont investi les nouveaux locaux et profitent du confort d’une Gaming Room dédiée. Et qu’on se le dise, ils s’entraînent d’arrache-pied pour tout casser dans les Challengers France 2024 !",
+    "date_publication": "Wed Mar 27 2024"
   },
   {
     "identifiant": 3,
-    "auteur": "francis",
-    "idAuteur": 1,
-    "titre": "Ceci est un test",
-    "contenu": "Saaaaaaaalutt",
-    "date_publication": null
-  },
-  {
-    "identifiant": 5,
-    "auteur": "francis",
+    "auteur": "Brochet",
     "idAuteur": 3,
-    "titre": "Ceci est un test",
-    "contenu": "Saaaaaaaalutt",
-    "date_publication": null
+    "titre": "Troisième article",
+    "contenu": "Ce n’est plus un secret pour personne, Mandatory a posé ses valises à Montpellier, ainsi que ses serviettes de plage. Alors que chacun jouait de chez lui, en dehors d’occasionnels bootcamps à Lyon, toute l’équipe Valorant est désormais réunie dans le Sud ! Après quelques mois de transition, ils ont investi les nouveaux locaux et profitent du confort d’une Gaming Room dédiée. Et qu’on se le dise, ils s’entraînent d’arrache-pied pour tout casser dans les Challengers France 2024 !",
+    "date_publication": "Wed Mar 27 2024"
   },
   {
     "identifiant": 4,
-    "auteur": "francis",
+    "auteur": "Brochet",
     "idAuteur": 3,
-    "titre": "Ceci est un test",
-    "contenu": "Saaaaaaaalutt",
-    "date_publication": null
+    "titre": "Article 4",
+    "contenu": "Ce n’est plus un secret pour personne, Mandatory a posé ses valises à Montpellier, ainsi que ses serviettes de plage. Alors que chacun jouait de chez lui, en dehors d’occasionnels bootcamps à Lyon, toute l’équipe Valorant est désormais réunie dans le Sud ! Après quelques mois de transition, ils ont investi les nouveaux locaux et profitent du confort d’une Gaming Room dédiée. Et qu’on se le dise, ils s’entraînent d’arrache-pied pour tout casser dans les Challengers France 2024 !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 5,
+    "auteur": "Brochet",
+    "idAuteur": 3,
+    "titre": "Mon  article 5",
+    "contenu": "Ce n’est plus un secret pour personne, Mandatory a posé ses valises à Montpellier, ainsi que ses serviettes de plage. Alors que chacun jouait de chez lui, en dehors d’occasionnels bootcamps à Lyon, toute l’équipe Valorant est désormais réunie dans le Sud ! Après quelques mois de transition, ils ont investi les nouveaux locaux et profitent du confort d’une Gaming Room dédiée. Et qu’on se le dise, ils s’entraînent d’arrache-pied pour tout casser dans les Challengers France 2024 !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 6,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Article de jean",
+    "contenu": "jean.dupont@example.com le meilleuireeee",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 7,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Article deux de Jean",
+    "contenu": "La nouvelle saison s’accompagne bien entendu d’un nouveau maillot Mandatory. Il est d’ores et déjà en vente sur la boutique ; alors si vous souhaitez supporter nos joueurs Valorant et World Of Warcraft avec classe, n’hésitez pas à y faire un petit tour !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 8,
+    "auteur": "helg",
+    "idAuteur": 2,
+    "titre": "Artcile de guigui",
+    "contenu": "Bien entendu, le nouvel arc de Mandatory est rendu possible grâce aux sponsors qui nous accordent leur confiance. Nous profitons de ce début d’année pour remercier une nouvelle fois Odoo et Razer, qui se sont engagés à nos côtés dès la fin 2023, ainsi que Holy et Gillette, qui nous suivent depuis quelques temps déjà. Par ailleurs, nous avons le plaisir de vous présenter deux nouveaux partenaires, Philips Hue et Materiel.Net, qui nous suivrons sur toute l’année 2024.",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 9,
+    "auteur": "helg",
+    "idAuteur": 2,
+    "titre": "Super article",
+    "contenu": "Bien entendu, le nouvel arc de Mandatory est rendu possible grâce aux sponsors qui nous accordent leur confiance. Nous profitons de ce début d’année pour remercier une nouvelle fois Odoo et Razer, qui se sont engagés à nos côtés dès la fin 2023, ainsi que Holy et Gillette, qui nous suivent depuis quelques temps déjà. Par ailleurs, nous avons le plaisir de vous présenter deux nouveaux partenaires, Philips Hue et Materiel.Net, qui nous suivrons sur toute l’année 2024.",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 10,
+    "auteur": "y",
+    "idAuteur": 5,
+    "titre": "Article de Yanis",
+    "contenu": "Bien entendu, le nouvel arc de Mandatory est rendu possible grâce aux sponsors qui nous accordent leur confiance. Nous profitons de ce début d’année pour remercier une nouvelle fois Odoo et Razer, qui se sont engagés à nos côtés dès la fin 2023, ainsi que Holy et Gillette, qui nous suivent depuis quelques temps déjà. Par ailleurs, nous avons le plaisir de vous présenter deux nouveaux partenaires, Philips Hue et Materiel.Net, qui nous suivrons sur toute l’année 2024.",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 11,
+    "auteur": "y",
+    "idAuteur": 5,
+    "titre": "Mon deuxième article super cool",
+    "contenu": "Bien entendu, le nouvel arc de Mandatory est rendu possible grâce aux sponsors qui nous accordent leur confiance. Nous profitons de ce début d’année pour remercier une nouvelle fois Odoo et Razer, qui se sont engagés à nos côtés dès la fin 2023, ainsi que Holy et Gillette, qui nous suivent depuis quelques temps déjà. Par ailleurs, nous avons le plaisir de vous présenter deux nouveaux partenaires, Philips Hue et Materiel.Net, qui nous suivrons sur toute l’année 2024.",
+    "date_publication": "Wed Mar 27 2024"
   }
 ]

@@ -6,26 +6,42 @@
     "email": "jean.dupont@example.com",
     "motDePasse": "dc",
     "numeroTelephone": "008",
-    "idBlog": "1"
+    "idBlog": 1
   },
   {
     "identifiant": 2,
     "nom": "helg",
     "prenom": "Guigz",
     "email": "guigz@gmail.com",
-    "motDePasse": "moncul",
+    "motDePasse": "guiguidu31",
     "numeroTelephone": "222",
     "idBlog": 2
   },
   {
     "identifiant": 3,
-    "nom": "helg",
-    "prenom": "Guigz",
+    "nom": "Brochet",
+    "prenom": "Romain ",
     "email": "test@gmail.com",
     "motDePasse": "1234",
     "numeroTelephone": "222",
-    "idBlog": 2
+    "idBlog": 3
+  },
+  {
+    "identifiant": 4,
+    "nom": "Degheb",
+    "prenom": "Yanis",
+    "email": "ydg@gmail.com",
+    "motDePasse": "1234",
+    "numeroTelephone": "0606060606",
+    "idBlog": 4
+  },
+  {
+    "identifiant": 5,
+    "nom": "y",
+    "prenom": "g",
+    "email": "YG@gmail.com",
+    "motDePasse": "1234",
+    "numeroTelephone": "0505035043",
+    "idBlog": 5
   }
-
-
 ]

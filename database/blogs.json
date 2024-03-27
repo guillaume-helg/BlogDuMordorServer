@@ -3,14 +3,20 @@
     "identifiant": 1,
     "nom": "Blog du Saint",
     "idAuteur": 1,
-    "idArticles": [3 ,2],
+    "idArticles": [
+      6,
+      7
+    ],
     "droitAcces": []
   },
   {
     "identifiant": 2,
     "nom": "Blog de helg",
     "idAuteur": 2,
-    "idArticles": [3 ,2],
+    "idArticles": [
+      8,
+      9
+    ],
     "droitAcces": [
       3,
       2
@@ -18,15 +24,38 @@
   },
   {
     "identifiant": 3,
-    "nom": "Blog de helg",
+    "nom": "Blog de Romain",
     "idAuteur": 3,
     "idArticles": [
-    4,
+      1,
+      2,
+      3,
+      4,
       5
     ],
     "droitAcces": [
-      3,
-      12
+      3
+    ]
+  },
+  {
+    "identifiant": 4,
+    "nom": "Blog de Degheb",
+    "idAuteur": 4,
+    "idArticles": [],
+    "droitAcces": [
+      4
+    ]
+  },
+  {
+    "identifiant": 5,
+    "nom": "Blog de Degheb",
+    "idAuteur": 5,
+    "idArticles": [
+      10,
+      11
+    ],
+    "droitAcces": [
+      5
     ]
   }
 ]
