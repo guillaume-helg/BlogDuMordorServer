@@ -86,5 +86,13 @@
     "titre": "Mon deuxième article super cool",
     "contenu": "Bien entendu, le nouvel arc de Mandatory est rendu possible grâce aux sponsors qui nous accordent leur confiance. Nous profitons de ce début d’année pour remercier une nouvelle fois Odoo et Razer, qui se sont engagés à nos côtés dès la fin 2023, ainsi que Holy et Gillette, qui nous suivent depuis quelques temps déjà. Par ailleurs, nous avons le plaisir de vous présenter deux nouveaux partenaires, Philips Hue et Materiel.Net, qui nous suivrons sur toute l’année 2024.",
     "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 12,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Newsssssss Yanis devient malade après un yaourt",
+    "contenu": "La nouvelle saison s’accompagne bien entendu d’un nouveau maillot Mandatory. Il est d’ores et déjà en vente sur la boutique ; alors si vous souhaitez supporter nos joueurs Valorant et World Of Warcraft avec classe, n’hésitez pas à y faire un petit tour !",
+    "date_publication": "Wed Mar 27 2024"
   }
 ]

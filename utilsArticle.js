@@ -16,6 +16,10 @@ function putArticle(filePath, dataObject) {
 
     dataObject.identifiant = maxId + 1;
 
+    if (dataObject.identifiant == null) {
+        dataObject.identifiant = 1;
+    }
+
     articles.push(dataObject);
 
     addArticleToBlog('./database/blogs.json', dataObject.idAuteur, dataObject.identifiant)
