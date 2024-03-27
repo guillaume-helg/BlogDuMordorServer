@@ -110,12 +110,24 @@ function addArticleToBlog(filePath, idBlog, idArticle) {
 function removeArticleToBlog(filePath, idBlog, idArticle) {
     let blogs = readBlogData(filePath);
 
+    console.log("Blogs:", blogs);
+
     const blogAModifier = blogs.find(blog => blog.identifiant === idBlog);
 
+    console.log("Blog à modifier:", blogAModifier);
+
     if (blogAModifier) {
-        blogAModifier.idArticles.splice(idArticle, 1);
-        fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
-        console.log("article ajouté au blog");
+        const index = blogAModifier.idArticles.indexOf(idArticle);
+        if (index !== -1) {
+            blogAModifier.idArticles.splice(index, 1);
+            fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
+            console.log("Article supprimé du blog avec succès.");
+        } else {
+            console.log("L'article spécifié n'existe pas dans ce blog. " + idArticle);
+            console.log(idArticle);
+        }
+    } else {
+        console.log("Le blog spécifié n'existe pas.");
     }
 }
 
