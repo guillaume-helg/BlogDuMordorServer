@@ -40,14 +40,6 @@
     "date_publication": "Wed Mar 27 2024"
   },
   {
-    "identifiant": 6,
-    "auteur": "Dupont",
-    "idAuteur": 1,
-    "titre": "Article de jean",
-    "contenu": "jean.dupont@example.com le meilleuireeee",
-    "date_publication": "Wed Mar 27 2024"
-  },
-  {
     "identifiant": 7,
     "auteur": "Dupont",
     "idAuteur": 1,
@@ -93,6 +85,38 @@
     "idAuteur": 1,
     "titre": "Newsssssss Yanis devient malade après un yaourt",
     "contenu": "La nouvelle saison s’accompagne bien entendu d’un nouveau maillot Mandatory. Il est d’ores et déjà en vente sur la boutique ; alors si vous souhaitez supporter nos joueurs Valorant et World Of Warcraft avec classe, n’hésitez pas à y faire un petit tour !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 14,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Manel qui embrasse (Le mec en vert) ",
+    "contenu": "Alors voila, après une crise passagère du à des révisions intensives de réseau Manel à décidé de s'afficher sur les réseaux en train d'embrasser (le mec en vert). N'est ce pas là une folie ? J'espère que nos internautes vont adorer cet article !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 15,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Menace de mort de Manel envers Guillaume !!!!",
+    "contenu": "En cette période de partielles, relativement compliqués Manel me menace !",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 16,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Manel commet l'irreparable suite au harcelement auquel elle fait face ",
+    "contenu": "Le sel est connu depuis la Préhistoire (voir une des plus anciennes villes préhistoriques d'Europe Solnitsata) pour ses caractéristiques d'assaisonnement et de conservation des aliments. Il était extrait de mines généralement très enfouies dans le sol (mines de roches évaporitiques telle que la halite), ou plus facilement de sources salées ou de la mer (saliculture)1. Les tessons de briquetages, céramiques utilitaires dans l'extraction de sel (marmites où l'on faisait bouillir la saumure sur des fours à feux de bois et bâtonnets d'argile cuite dont l'assemblage permettait une partie de l'évaporation de cette saumure) sont fréquemment retrouvés jusqu'à l'âge du fer, période qui voit l'apparition d'outillages plus robustes et de plus grande capacité dans lesquels on faisait légèrement chauffer la saumure filtrée et concentrée (l'ethnoarchéologie montre que des croûtes de terre salées et séchées sont lessivées dans un entonnoir filtrant ou un panier par de l'eau de mer puis par de la saumure, de telle sorte que le jus salé arrive à saturation) pour préserver le combustible, l'obtention de grandes quantités de sel par ébullition de saumure consommant trop de bois2. ",
+    "date_publication": "Wed Mar 27 2024"
+  },
+  {
+    "identifiant": 17,
+    "auteur": "Dupont",
+    "idAuteur": 1,
+    "titre": "Le créateur du blog a été tué avant son controle de réseaux",
+    "contenu": "En premier ressort, un réseau désigne au sens concret « un ensemble de lignes entrelacées » et, au figuré « un ensemble de relations ».\n\nPar extension, il désigne un ensemble interconnecté, fait de composants et de leurs inter-relations, autorisant la circulation en mode continu ou discontinu de flux (eau, air, huile…) ou d'éléments finis (marchandises, informations, personnes…).\n\nLe réseau peut être « matériel » (comme le réseau électrique, le réseau routier, le réseau sanguin ou le réseau lymphatique), « immatériel » (comme le réseau social), « abstrait, symbolique ou normalisé » (comme le réseau de tâches de la méthode PERT). ",
     "date_publication": "Wed Mar 27 2024"
   }
 ]

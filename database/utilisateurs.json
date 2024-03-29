@@ -2,7 +2,7 @@
   {
     "identifiant": 1,
     "nom": "Dupont",
-    "prenom": "Jea",
+    "prenom": "Jean",
     "email": "jean.dupont@example.com",
     "motDePasse": "dc",
     "numeroTelephone": "008",

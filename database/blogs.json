@@ -4,9 +4,12 @@
     "nom": "Blog du Saint",
     "idAuteur": 1,
     "idArticles": [
-      6,
       7,
-      12
+      12,
+      14,
+      15,
+      16,
+      17
     ],
     "droitAcces": []
   },
